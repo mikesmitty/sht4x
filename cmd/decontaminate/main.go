@@ -20,7 +20,7 @@ https://web.archive.org/web/20221006045126/https://sensirion.com/media/documents
 */
 func main() {
 	bus := flag.String("bus", "", "Name of the bus")
-	ack := flag.Bool("acknowledge-fire-warning", false, "Acknowledge warning regarding potential hardware failure")
+	ack := flag.Bool("acknowledge-fire-warning", false, "Acknowledge warning regarding fire hazard and/or potential hardware failure")
 	dur := flag.Duration("duration", 0, "Duration to activate heater for")
 	flag.Parse()
 
