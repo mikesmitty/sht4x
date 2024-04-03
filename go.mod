@@ -1,6 +1,6 @@
 module github.com/mikesmitty/sht4x
 
-go 1.22.1
+go 1.22.2
 
 require (
 	periph.io/x/conn/v3 v3.7.0
