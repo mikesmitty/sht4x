@@ -1,0 +1,75 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+    outputs:
+      release-created: ${{ steps.release.outputs.release_created }}
+      tag-name: ${{ steps.release.outputs.tag_name }}
+
+
+  build:
+    if: ${{ needs.release-please.outputs.release-created }}
+    needs: release-please
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - release_arch: linux
+            goos: linux
+            goarch: amd64
+
+          - release_arch: linux_arm
+            goos: linux
+            goarch: arm
+
+          - release_arch: linux_arm64
+            goos: linux
+            goarch: arm64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup go environment
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: "./go.mod"
+
+      - name: Build binaries
+        env:
+          GOOS: ${{ matrix.goos }}
+          GOARCH: ${{ matrix.goarch }}
+          RELEASE_ARCH: ${{ matrix.release_arch }}
+          VERSION: ${{ needs.release-please.outputs.tag-name }}
+        run: |
+          # Disable CGO for portability
+          CGO_ENABLED=0
+          go env -w CGO_ENABLED=0
+
+          go env -w GOOS=$GOOS
+          go env -w GOARCH=$GOARCH
+
+          # Output directory
+          mkdir -p artifacts/
+
+          echo "Building ${GOOS}/${GOARCH}"
+          go build -a -v -trimpath -tags netgo -ldflags '-extldflags "-static"' -o artifacts/chilly-boy_${VERSION}_${RELEASE_ARCH}
+
+      - name: Upload Artifacts
+        run: |
+          gh release upload ${{ needs.release-please.outputs.tag-name }} artifacts/*
+        env:
+          GH_TOKEN: ${{ github.token }}
