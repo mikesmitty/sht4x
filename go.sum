@@ -10,3 +10,5 @@ periph.io/x/host/v3 v3.8.2 h1:ayKUDzgUCN0g8+/xM9GTkWaOBhSLVcVHGTfjAOi8OsQ=
 periph.io/x/host/v3 v3.8.2/go.mod h1:yFL76AesNHR68PboofSWYaQTKmvPXsQH2Apvp/ls/K4=
 periph.io/x/host/v3 v3.8.3 h1:v90ozCFDWgEyfNElZ+JnOvq0jAdW0vmgjCUy8dYXDds=
 periph.io/x/host/v3 v3.8.3/go.mod h1:uKrIpfXjELwHkwGBNe6aos//XiQ/3uxDa1P2BmLV6Ok=
+periph.io/x/host/v3 v3.8.4 h1:QNleTythDd0k6Chu0n+ISrJFlf3LFig9oNbtOIkxoCc=
+periph.io/x/host/v3 v3.8.4/go.mod h1:hPq8dISZIc+UNfWoRj+bPH3XEBQqJPdFdx218W92mdc=
