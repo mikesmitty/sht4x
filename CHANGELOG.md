@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/mikesmitty/sht4x/compare/v0.3.0...v0.3.1) (2025-03-30)
+
+
+### Bug Fixes
+
+* **deps:** update module periph.io/x/host/v3 to v3.8.4 ([#14](https://github.com/mikesmitty/sht4x/issues/14)) ([f483f27](https://github.com/mikesmitty/sht4x/commit/f483f271643f9f4db45ff0591518904e1ff66e43))
+
 ## [0.3.0](https://github.com/mikesmitty/sht4x/compare/v0.2.0...v0.3.0) (2025-02-15)
 
 
