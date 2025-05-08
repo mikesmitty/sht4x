@@ -2,7 +2,7 @@ module github.com/mikesmitty/sht4x
 
 go 1.22.6
 
-toolchain go1.24.2
+toolchain go1.24.3
 
 require (
 	periph.io/x/conn/v3 v3.7.2
