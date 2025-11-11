@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/mikesmitty/sht4x/compare/v0.3.2...v0.3.3) (2025-11-11)
+
+
+### Bug Fixes
+
+* Update dependency go to v1.25.4 ([#28](https://github.com/mikesmitty/sht4x/issues/28)) ([d4cf302](https://github.com/mikesmitty/sht4x/commit/d4cf302c8568ed0b397a943135e3e42cba352a2e))
+
 ## [0.3.2](https://github.com/mikesmitty/sht4x/compare/v0.3.1...v0.3.2) (2025-04-13)
 
 
