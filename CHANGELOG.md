@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://github.com/mikesmitty/sht4x/compare/v0.3.3...v0.4.0) (2026-04-30)
+
+
+### Features
+
+* Update go toolchain directive to v1.26.2 ([#31](https://github.com/mikesmitty/sht4x/issues/31)) ([33631fc](https://github.com/mikesmitty/sht4x/commit/33631fce727383cd73851ab62deb4da5c4c6bad9))
+
+
+### Bug Fixes
+
+* Update module periph.io/x/conn/v3 to v3.7.3 ([#32](https://github.com/mikesmitty/sht4x/issues/32)) ([07f8a13](https://github.com/mikesmitty/sht4x/commit/07f8a13bee05a434a4058887d680cc8e65dd44dc))
+
 ## [0.3.3](https://github.com/mikesmitty/sht4x/compare/v0.3.2...v0.3.3) (2025-11-11)
 
 
